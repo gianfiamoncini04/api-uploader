@@ -7,8 +7,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model File{
-  id String @id @default(cuid())
-  name String 
-  createdAt DateTime @default(now())
+model File {
+  id          String   @id @default(cuid())
+  name        String
+  key         String
+  contentType String
+  createdAt   DateTime @default(now())
 }
